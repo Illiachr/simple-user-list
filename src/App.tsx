@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AddUser from './components/AddUser/AddUser';
 import { IUserData, UserListType } from './types/types';
+import UsersList from './components/UsersList/UsersList';
 
 function App() {
   const [userList, setUserList] = useState<UserListType>([]);
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <AddUser text='New User' onUserAdd={onUserAdd} />
+      <UsersList data={userList}/>
     </div>
   );
 }

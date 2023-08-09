@@ -1,7 +1,8 @@
+import { UserListType } from '../../types/types';
 import classes from './UsersList.module.css';
 
 type Props = {
-  data: Array<object>
+  data: UserListType
 }
 
 const UsersList = ({ data }: Props) => {
@@ -10,7 +11,7 @@ const UsersList = ({ data }: Props) => {
       <ul>
         {!data || data.length === 0
           ? <li>No user added</li>
-          : data.map((user, id) => (<li key={id}>USER ITEM</li>))}
+          : data.map(({id, name}) => (<li key={id}>{name}</li>))}
       </ul>
     </div>
   );
