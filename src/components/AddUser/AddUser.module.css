@@ -1,26 +1,35 @@
-.input {
+.form {
   margin: 2rem auto;
   padding: 1rem;
   width: 90%;
   max-width: 40rem;
 }
 
-.input label {
+.form .input-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+.input-wrapper label {
   display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.input input {
+.input-wrapper input {
   font: inherit;
   display: block;
   width: 100%;
   border: 1px solid #ccc;
   padding: 0.15rem;
-  margin-bottom: 0.5rem;
 }
 
-.input input:focus {
+.input-wrapper span {
+  font-size: 12px;
+  padding-left: 0.15rem;
+  color: #dc3545;
+}
+
+.input-wrapper input:focus {
   outline: none;
   border-color: #4f005f;
 }

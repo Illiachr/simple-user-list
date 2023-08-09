@@ -2,12 +2,18 @@ import classes from './Button.module.css';
 
 type ButtonProps = {
   text: string,
-  onClick: () => void
+  disabled: boolean
 }
 
-const Button = ({ text, onClick}: ButtonProps) => {
+const Button = ({ text, disabled }: ButtonProps) => {
   return (
-    <button type="button" className={classes.button} onClick={onClick}>{text}</button>
+    <button
+      type="submit"
+      className={classes.button}
+      disabled={disabled}
+    >
+      {text}
+    </button>
   );
 };
 
