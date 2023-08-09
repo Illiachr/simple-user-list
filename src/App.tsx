@@ -1,11 +1,22 @@
 import { useState } from 'react';
+import AddUser from './components/AddUser/AddUser';
+import { IUserData, UserListType } from './types/types';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [userList, setUserList] = useState<UserListType>([]);
+
+  const onUserAdd = (data: IUserData) => {
+    setUserList((prevUserList) => {
+      return [
+        data,
+        ...prevUserList
+      ]
+    });
+  };
 
   return (
     <div>
-      App
+      <AddUser text='New User' onUserAdd={onUserAdd} />
     </div>
   );
 }
